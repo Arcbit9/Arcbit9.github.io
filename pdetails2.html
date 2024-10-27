@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="details.css">
+    <script src="details.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="branding">
+            <a href="project.html"><h1>PixelPavillion</h1></a>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Cart</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
+    <main id="product-details" class="fade-in">
+        <div class="image-slider">
+            <img id="slider-image" src="g16.jpeg" alt="Product Image">
+            <div class="thumbnails">
+                <img src="g16.jpeg" alt="Product Image 1" onclick="changeImage('g16.jpeg')">
+                <img src="g161.jpeg" alt="Product Image 2" onclick="changeImage('g161.jpeg')">
+                <img src="g162.jpeg" alt="Product Image 3" onclick="changeImage('g162.jpeg')">
+            </div>
+        </div>
+        <div class="product-info">
+            <h2>ROG Zephyrus G16 (2024) GA605</h2>
+            <p>Price: $10</p>
+            <p>About this item.<br>
+                Windows 11 Home<br>
+NVIDIA® GeForce RTX™ 4070 Laptop GPU<br>
+AMD XDNA™ NPU up to 50TOPS<br>
+AMD Ryzen™ AI 9 HX 370 Processor<br>
+16" 2.5K (2560 x 1600, WQXGA) 16:10 240Hz OLED ROG Nebula Display<br>
+2TB M.2 NVMe™ PCIe® 4.0 SSD storage<br>
+            </p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
+    
+</body>
+</html>

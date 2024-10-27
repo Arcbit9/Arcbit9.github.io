@@ -1,0 +1,145 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 252, 252); /* Set background to black */
+    color: rgb(0, 0, 0); /* Text color to white for contrast */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #333; /* Dark scrollbar track */
+}
+::-webkit-scrollbar-thumb {
+    background: #555; /* Dark scrollbar thumb */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Color of the scrollbar thumb on hover */
+}
+
+header {
+    background-image: url("images.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.branding a {
+    color: white; /* Keep the text color white */
+    text-decoration: none; /* Remove underline */
+}
+
+.branding a:hover {
+    text-decoration: underline; /* Optional: add underline on hover for emphasis */
+}
+
+.branding {
+    align-self: flex-start;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#slider-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thumbnails img {
+    width: 70px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+.product-info {
+    text-align: center;
+    padding: 20px;
+}
+
+.product-info h2 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.product-info button {
+    padding: 10px 20px;
+    background-color: #64cbfb;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-info button:hover {
+    background-color: #5aafdb;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+footer {
+    background-image: url("images.jpeg");
+    background-color: #64cbfb;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="details.css">
+    <script src="details.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="branding">
+            <a href="project.html"><h1>PixelPavillion</h1></a>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Cart</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
+    <main id="product-details" class="fade-in">
+        <div class="image-slider">
+            <img id="slider-image" src="h.jpeg" alt="Product Image">
+            <div class="thumbnails">
+                <img src="h.jpeg" alt="Product Image 1" onclick="changeImage('h.jpeg')">
+                <img src="h2.jpeg" alt="Product Image 2" onclick="changeImage('h2.jpeg')">
+                <img src="h3.jpeg" alt="Product Image 3" onclick="changeImage('h3.jpeg')">
+            </div>
+        </div>
+        <div class="product-info">
+            <h2>Maltek Wired Headset</h2>
+            <p>Price: $10</p>
+            <p>About this item.<br>
+                3D GAMING SOUND: It’s important for you to hear footsteps & distant gunshots from different directions. This headset offer a 360-degree soundscape to provide realism to your gaming session.<br>
+                FLEXIBLE NOISE CANCELLATION BOOM MIC: Matlek headset accurately picks up your voice to cancel out other background noises.<br>
+                ERGONOMIC SOFT EARMUFF+ADJUSTABLE HEADBAND+LIGHTWEIGHT: This Headphone is shaped to naturally fit the human head, the earmuff is filled with soft memory foam, and adjustable headband.<br>
+            </p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
+   
+</body>
+</html>

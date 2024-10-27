@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("images.jpeg"); /* Use the same background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    color: white; /* Text color */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px; /* Spacing from the top */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the form */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for the container */
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px; /* Limit the width */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #222; /* Darker input background */
+    color: white; /* Text color for inputs */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #64cbfb; /* Highlight color on focus */
+}
+
+button {
+    padding: 10px;
+    background-color: #64cbfb;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5aafdb; /* Darken button on hover */
+}
+
+.hidden {
+    display: none; /* Hide loading text initially */
+}
+
+#loading {
+    margin-top: 10px;
+    color: #64cbfb; /* Loading text color */
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
