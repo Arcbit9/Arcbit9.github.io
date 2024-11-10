@@ -8,6 +8,15 @@ body {
     color: #333;
     overflow-y: auto; /* Allow vertical scrolling */
 }
+header {
+    background-image: url('your-high-resolution-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    color: white;
+    text-align: center;
+}
 
 /* Scrollbar styles */
 ::-webkit-scrollbar {
