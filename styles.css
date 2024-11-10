@@ -5,22 +5,22 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #f4f4f4;
-    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-y: auto;
 }
 
-/* Scrollbar styles */
+
 ::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
+    width: 8px; 
 }
 ::-webkit-scrollbar-track {
-    background: #f4f4f4; /* Background of the scrollbar track */
+    background: #f4f4f4;
 }
 ::-webkit-scrollbar-thumb {
-    background: #ccc; /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+    background: #ccc;
+    border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #888; /* Color of the scrollbar thumb on hover */
+    background: #888;
 }
 
 header {
