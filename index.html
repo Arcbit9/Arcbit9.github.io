@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Pavilion</title>
+    <title>PixelPavillion</title>
     <link rel="stylesheet" href="styles.css">
     <script src="test.js" defer></script>
     <link rel="icon" href="logo.png" type="image/icon type">
@@ -11,21 +11,24 @@
 <body>
     <header>
         <div class="branding">
-            <a href="index.html"><h1>Pixel Pavilion</h1></a>
+            <a style="color: neon-cyan; font-family: 'Fancy Font', cursive;" href="project.html"><h1>PixelPavillion</h1></a>
         </div>
-        <nav>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search for products...">
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav id="side-menu" class="side-menu">
             <a href="index.html">Home</a>
             <a href="cart.html">Cart</a>
             <a href="login.html">Login</a>
             <a href="about.html">About Us</a>
         </nav>
-        <input type="text" id="search-bar" placeholder="Search for products...">
     </header>
     <main id="product-list">
         <!-- Product items will be injected here by JavaScript -->
     </main>
     <footer>
-        <p>&copy; Pixel Pavilion</p>
+        <p>&copy; PixelPavillion</p>
     </footer>
     <div class="additional-links">
         <a href="#">Help and Support</a>
