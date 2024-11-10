@@ -27,6 +27,7 @@ body {
 header {
     background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtzsXG_SkIbjMEp2SFomJFQQzB17NddDztLQ&s') no-repeat center center/cover;
     color: white;
+    height: 200px;
     padding: 20px;
     position: relative;
     text-align: center;
