@@ -25,8 +25,7 @@ body {
 }
 
 header {
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtzsXG_SkIbjMEp2SFomJFQQzB17NddDztLQ&s') no-repeat center center;
-    background-size: cover;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtzsXG_SkIbjMEp2SFomJFQQzB17NddDztLQ&s') no-repeat center center/cover;
     color: white;
     padding: 20px;
     position: relative;
@@ -36,29 +35,25 @@ header {
 
 .branding {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-.branding a {
-    color: neon-cyan;
-    text-decoration: none;
-    font-family: 'Fancy Font', cursive;
+.branding h1 {
+    font-family: 'Times New Roman', Times, serif;
     font-size: 2.5em;
-    transition: color 0.3s ease;
-}
-
-.search-container {
-    text-align: center;
-    margin-top: 10px;
+    color: cyan;
+    text-shadow: 0 0 5px rgba(0,255,255,0.7), 0 0 10px rgba(0,255,255,0.7), 0 0 20px rgba(0,255,255,0.7);
+    margin: 0;
 }
 
 #search-bar {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    width: 40%;
+    width: 30%;
     margin: 10px auto;
+    display: block;
     transition: width 0.3s ease;
 }
 
@@ -70,58 +65,42 @@ header {
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: transparent;
+    background: none;
     border: none;
     font-size: 1.5em;
     color: white;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .menu-button:hover {
-    color: #61dafb;
+    transform: rotate(90deg);
 }
 
-.side-menu {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #282c34;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    padding-top: 60px;
-    text-align: center;
-    transition: right 0.3s ease;
+.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    gap: 10px;
+    animation: slideIn 0.5s ease-in-out;
 }
 
-.side-menu a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
+.menu a {
     color: white;
+    text-decoration: none;
     font-weight: bold;
-    margin: 10px 0;
+    padding: 10px 20px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.side-menu a:hover {
-    background-color: #61dafb;
+.menu a:hover {
+    background-color: #21a1f1;
     transform: scale(1.05);
-}
-
-.side-menu.open {
-    right: 0;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes slideIn {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(0); }
 }
 
 main {
@@ -167,7 +146,18 @@ main {
     margin-bottom: 10px;
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
 footer {
+    background: url('data:image/jpeg;base64,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') no-repeat center center/cover;
     background-color: #282c34;
     color: white;
     padding: 20px;
@@ -191,4 +181,11 @@ footer {
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
-    background
+    background-color: #61dafb;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.additional-links a:hover {
+    background-color: #21a1f1;
+    transform: scale(1.05);
+}
