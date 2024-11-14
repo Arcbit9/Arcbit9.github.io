@@ -24,6 +24,7 @@ body {
     background: #888; /* Color of the scrollbar thumb on hover */
 }
 
+/* Header */
 header {
     background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtzsXG_SkIbjMEp2SFomJFQQzB17NddDztLQ&s') no-repeat center center/cover;
     color: white;
@@ -34,6 +35,7 @@ header {
     animation: fadeIn 1s ease-in-out;
 }
 
+/* Branding */
 .branding {
     display: flex;
     flex-direction: column;
@@ -48,6 +50,7 @@ header {
     margin: 0;
 }
 
+/* Search Bar */
 #search-bar {
     padding: 10px;
     border: none;
@@ -62,6 +65,7 @@ header {
     width: 50%;
 }
 
+/* Menu Button (Hamburger Icon) */
 .menu-button {
     position: absolute;
     top: 20px;
@@ -72,38 +76,43 @@ header {
     color: white;
     cursor: pointer;
     transition: transform 0.3s ease;
+    z-index: 1000;  /* Ensure it stays on top */
 }
 
 .menu-button:hover {
     transform: rotate(90deg);
 }
 
-.menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-    padding: 20px;
-    gap: 10px;
-    animation: slideIn 0.5s ease-in-out;
+/* Sliding Menu */
+.side-menu {
+    height: 100%;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    right: -250px;  /* Hidden off-screen initially */
+    transition: right 0.3s ease-in-out;
+    padding-top: 60px;
+    z-index: 999; /* Ensure it appears on top */
+    border-radius: 10px 0 0 10px; /* Rounded corners on the left side */
 }
 
-.menu a {
+.side-menu a {
+    display: block;
     color: white;
+    padding: 15px 20px;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 20px;
+    text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.menu a:hover {
+.side-menu a:hover {
     background-color: #21a1f1;
     transform: scale(1.05);
 }
 
+/* Main content area */
 main {
     padding: 20px;
     display: flex;
@@ -121,7 +130,6 @@ main {
     width: calc(25% - 40px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: slideIn 0.5s ease-in-out;
 }
 
 .product:hover {
@@ -147,25 +155,7 @@ main {
     margin-bottom: 10px;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes slideIn {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(0); }
-}
-
-footer {
-    background: url('data:image/jpeg;base64,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') no-repeat center center/cover;
-    background-color: #282c34;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
-}
-
+/* Additional Links */
 .additional-links {
     background-color: #4f4f4f;
     padding: 20px;
@@ -189,4 +179,15 @@ footer {
 .additional-links a:hover {
     background-color: #21a1f1;
     transform: scale(1.05);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
 }
