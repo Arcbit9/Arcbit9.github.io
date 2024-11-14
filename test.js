@@ -14,22 +14,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const productList = document.getElementById('product-list');
     const searchBar = document.getElementById('search-bar');
 
+    // Function to create a product card
+    function createProductElement(product) {
+        const productDiv = document.createElement('div');
+        productDiv.classList.add('product');
+        productDiv.innerHTML = `
+            <img src="${product.image}" alt="${product.name}" onclick="location.href='pdetails${product.id}.html'" onerror="this.onerror=null;this.src='fallback.jpg';">
+            <h2>${product.name}</h2>
+            <p>${product.price}</p>
+        `;
+        return productDiv;
+    }
+
+    // Function to display products (filtered or all)
     function displayProducts(filteredProducts) {
         productList.innerHTML = '';
         filteredProducts.forEach(product => {
-            const productDiv = document.createElement('div');
-            productDiv.classList.add('product');
-            productDiv.innerHTML = `
-                <img src="${product.image}" alt="${product.name}" onclick="location.href='pdetails${product.id}.html'">
-                <h2>${product.name}</h2>
-                <p>${product.price}</p>
-            `;
+            const productDiv = createProductElement(product);
             productList.appendChild(productDiv);
         });
     }
 
+    // Initial display of all products
     displayProducts(products);
 
+    // Add event listener for the search bar
     searchBar.addEventListener('input', (event) => {
         const searchTerm = event.target.value.toLowerCase();
         const filteredProducts = products.filter(product => 
@@ -37,4 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         );
         displayProducts(filteredProducts);
     });
+
+    // Optional: Focus on the search bar when the page loads
+    searchBar.focus();
 });
