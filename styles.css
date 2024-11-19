@@ -1,0 +1,468 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+::-webkit-scrollbar-track {
+    background: #f4f4f4; /* Background of the scrollbar track */
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+::-webkit-scrollbar-thumb:hover {
+
+    background: #888; /* Color of the scrollbar thumb on hover */
+}
+
+.header {
+   
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ8j_nz0VM5Vs6BAJ69QPaTaqPxJ1K9XBXCA&s') no-repeat center center; /* Add your background image */
+    background-size: cover; /* Cover the entire header */
+    color: white;
+    padding: 50px; /* Increased height */
+    text-align: center;
+    z-index: 10; /* Ensure the header is on top of other elements */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em; /* Slightly larger font size */
+    text-shadow: 2px 2px 4px #000; /* Adding some shadow for better readability */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0; /* Remove the adjustment for below the header */
+    left: -200px; /* Start off-screen */
+    height: 100vh; /* Full height */
+    width: 200px;
+    background-color: white; /* White background */
+    color: blue; /* Blue text */
+    overflow-x: hidden;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 20; /* Ensure the sidebar is on top of the header */
+    animation: slideIn 0.5s forwards; /* Add sliding animation */
+}
+
+@keyframes slideIn {
+    from {
+        left: -200px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.sidebar .branding {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .branding h1 {
+    font-size: 1.5em; /* Smaller font size */
+    color: black; /* White text for contrast */
+    padding: 20px 0;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1em; /* Smaller font size */
+    color: blue; /* Blue text */
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.sidebar a i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.sidebar a:hover {
+    background-color: #ddd; /* Light gray background on hover */
+    padding-left: 25px;
+}
+
+main {
+    margin-left: 220px; /* Adjust main content to accommodate sidebar */
+    padding-top: 160px; /* Adjust to be below the header */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.division {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px);
+    height: 200px; /* Decreased height */
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.division img {
+    max-width: 70%; /* Increased width */
+    height: auto;
+    border-radius: 10px;
+}
+
+.division .division-text {
+    max-width: 30%; /* Adjusted to give more space to images */
+    text-align: left;
+    padding: 0 20px;
+}
+
+.division-left {
+    align-self: flex-start;
+}
+
+.division-right {
+    align-self: flex-end;
+}
+
+.division:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.product .product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product .product-details h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.product .product-details p {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.product .product-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.product .product-details ul li {
+    margin-bottom: 5px;
+}
+.product-details-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.image-flipper {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.image-flipper button {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.image-flipper img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+.product-info {
+    max-width: 500px;
+}
+
+.product-info h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-info h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.product-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.product-info ul li {
+    margin-bottom: 10px;
+}
+/* styles.css */
+
+/* Add these new styles for animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.scroll-animate {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    animation: fadeInUp 1s ease-in-out;
+}
+/* styles.css */
+
+
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.login-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.login-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: blur(8px) brightness(50%);
+}
+
+.login-container {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+    margin: auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.login-container .branding {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container .branding h1 {
+    font-size: 2em;
+    color: white;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+   
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+}
+
+.input-group input:focus {
+    outline: none;
+    background-color: #444;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+  
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: cyan;
+}
+
+.help-links, .signup-link {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.help-links a, .signup-link a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.help-links a:hover, .signup-link a:hover {
+    color: #fff;
+}
+.product-details-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.image-flipper {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.image-flipper button {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.image-flipper img {
+    width: 400px; /* Increased size */
+    height: auto;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+.product-info {
+    max-width: 500px;
+}
+
+.product-info h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-info h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.product-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.product-info ul li {
+    margin-bottom: 10px;
+}
