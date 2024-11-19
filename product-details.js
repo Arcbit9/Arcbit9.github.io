@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const products = {
         pdetails1: ['h.jpeg', 'h2.jpeg', 'h3.jpeg'],
-        pdetails2: ['g16.jpeg', 'g162.jpeg', 'g163.jpeg'],
+        pdetails2: ['g16.jpeg', 'g161.jpeg', 'g162.jpeg'],
         pdetails3: ['m1.webp', 'm2.jpg', 'm3.jpg'],
         pdetails4: ['k1.jpg', 'k2.jpg', 'k3.jpg'],
         pdetails5: ['c1.webp', 'c2.jpg', 'c3.jpg'],
