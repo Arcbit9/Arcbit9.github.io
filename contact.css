@@ -5,116 +5,40 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-wrapper {
     display: flex;
     height: 100vh;
+    overflow: hidden;
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
+.contact-page {
+    display: flex;
     width: 100%;
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ8j_nz0VM5Vs6BAJ69QPaTaqPxJ1K9XBXCA&s') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 50px;
-    text-align: center;
-    z-index: 10;
+    height: 100%;
 }
 
-.header h1 {
-    margin: 0;
-    font-size: 2em;
-    text-shadow: 2px 2px 4px #000;
-}
-
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -200px;
-    height: 100vh;
-    width: 200px;
-    background-color: white;
-    color: blue;
-    overflow-x: hidden;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-    z-index: 20;
-    animation: slideIn 0.5s forwards;
-}
-
-@keyframes slideIn {
-    from {
-        left: -200px;
-    }
-    to {
-        left: 0;
-    }
-}
-
-.sidebar .branding {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.sidebar .branding h1 {
-    font-size: 1.5em;
-    color: black;
-    padding: 20px 0;
-}
-
-.sidebar a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 1em;
-    color: blue;
+.contact-form-container {
+    width: 40%;
     display: flex;
     align-items: center;
-    transition: background-color 0.3s, padding-left 0.3s;
-}
-
-.sidebar a i {
-    margin-right: 10px;
-}
-
-.sidebar a:hover {
-    background-color: #ddd;
-    padding-left: 25px;
-}
-
-main {
-    margin-left: 220px;
-    padding-top: 160px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contact-container {
-    max-width: 600px;
-    margin: auto;
-    padding: 40px;
+    justify-content: center;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-.contact-container h2 {
-    text-align: center;
+.contact-form {
+    max-width: 350px;
+    width: 100%;
+}
+
+.contact-form h2 {
     margin-bottom: 20px;
-    font-size: 2em;
     color: #333;
+    text-align: center;
 }
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: left;
 }
 
@@ -143,15 +67,21 @@ main {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #61dafb;
+    background-color: #00eeff;
     border: none;
     border-radius: 5px;
     color: white;
-    font-weight: bold;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #21a1f1;
+    background-color: #0026ff;
+}
+
+.contact-background {
+    width: 60%;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ8j_nz0VM5Vs6BAJ69QPaTaqPxJ1K9XBXCA&s') no-repeat center center;
+    background-size: cover;
 }
