@@ -3,37 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - PixelPavillion</title>
-    <link rel="stylesheet" href="contact.css">
+    <title>Login - PixelPavillion</title>
+    <link rel="stylesheet" href="login.css">
     <link rel="icon" href="logo.png" type="image/icon type">
+    <script src="login.js" defer></script>
 </head>
 <body>
-    <div class="contact-page">
-        <div class="contact-form-container">
-            <div class="contact-form">
-                <h2>Contact Us</h2>
-                <form>
+    <div class="login-page">
+        <div class="login-form-container">
+            <div class="login-form">
+                <h2>Sign In</h2>
+                <form method="POST" action="/login">
                     <div class="input-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
                     </div>
                     <div class="input-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
                     </div>
-                    <div class="input-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
+                    <button type="submit">Sign In</button>
+                    <div class="help-links">
+                        <a href="#" id="forgot-password-link">Forgot your password?</a>
                     </div>
-                    <div class="input-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
+                    <div class="signup-link">
+                        <p>New to PixelPavillion? <a href="signup.html">Sign up now</a></p>
                     </div>
-                    <button type="submit">Send Message</button>
                 </form>
             </div>
         </div>
-        <div class="contact-background"></div>
+        <div class="login-background"></div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Forgot Password</h2>
+            <p>Please enter your phone number to reset your password.</p>
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <button type="submit" id="reset-password-btn">Reset Password</button>
+        </div>
     </div>
 </body>
 </html>
