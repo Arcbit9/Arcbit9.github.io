@@ -8,23 +8,9 @@
     <link rel="icon" href="logo.png" type="image/icon type">
 </head>
 <body>
-    <div class="contact-wrapper">
-        <header class="header">
-            <h1>PixelPavillion</h1>
-        </header>
-        <aside class="sidebar">
-            <div class="branding">
-                <h1>PixelPavillion</h1>
-                <hr>
-            </div>
-            <a href="index.html"><i class="fas fa-home"></i> Home</a>
-           <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
-           
-            <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
-            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
-        </aside>
-        <main>
-            <div class="contact-container">
+    <div class="contact-page">
+        <div class="contact-form-container">
+            <div class="contact-form">
                 <h2>Contact Us</h2>
                 <form>
                     <div class="input-group">
@@ -36,13 +22,18 @@
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="input-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="input-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="4" required></textarea>
                     </div>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
-        </main>
+        </div>
+        <div class="contact-background"></div>
     </div>
 </body>
 </html>
